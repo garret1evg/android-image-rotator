@@ -7,7 +7,25 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <ImageView
-            android:layout_width="292dp"
-            android:layout_height="552dp" app:srcCompat="@drawable/liza" tools:layout_editor_absoluteY="89dp"
-            tools:layout_editor_absoluteX="59dp" android:id="@+id/img_rotate" tools:ignore="MissingConstraints"/>
+            android:layout_width="300dp"
+            android:layout_height="550dp" app:srcCompat="@drawable/liza"
+            android:id="@+id/img_rotate" tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+    <SeekBar
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:max="360"
+            android:progress="180"
+            android:id="@+id/slider" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@+id/img_rotate" app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="0\u00b0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            app:layout_constraintBottom_toTopOf="@+id/slider" app:layout_constraintTop_toBottomOf="@+id/img_rotate"
+            tools:ignore="HardcodedText,MissingConstraints" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
