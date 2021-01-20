@@ -26,15 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         slider.setOnSeekBarChangeListener(seekBarChangeListener);
 
-//        rotatedImg.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                RotateAnimation rotateAnimation = new RotateAnimation(0,360,RotateAnimation.RELATIVE_TO_SELF, 0.5f,
-//                        RotateAnimation.RELATIVE_TO_SELF,0.5f);
-//                rotateAnimation.setDuration(1000);
-//                rotatedImg.startAnimation(rotateAnimation);
-//            }
-//        });
     }
 
     private SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
