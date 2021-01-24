@@ -1,7 +1,9 @@
 package com.example.image_rotator;
 
 import android.graphics.Matrix;
+import android.view.View;
 import android.view.animation.RotateAnimation;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -11,8 +13,10 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     ImageView rotatedImg;
-    SeekBar slider;
+    CustomizedSeekBar slider;
     TextView textView;
+    ImageButton buttonR;
+    ImageButton buttonL;
     int angle = 0;
 
     @Override
@@ -23,10 +27,15 @@ public class MainActivity extends AppCompatActivity {
         rotatedImg = findViewById(R.id.img_rotate);
         slider = findViewById(R.id.slider);
         textView = findViewById(R.id.textView);
-
+        buttonL = findViewById(R.id.imageButtonL);
+        buttonR = findViewById(R.id.imageButtonR);
+        slider.setButtonL(buttonL);
+        slider.setButtonR(buttonR);
+        //slider.setTextView(textView);
         slider.setOnSeekBarChangeListener(seekBarChangeListener);
-
     }
+
+
 
     private SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
         @Override

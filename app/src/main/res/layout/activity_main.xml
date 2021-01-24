@@ -13,7 +13,7 @@
             android:id="@+id/img_rotate" tools:ignore="MissingConstraints"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
-    <SeekBar
+    <com.example.image_rotator.CustomizedSeekBar
             android:layout_width="353dp"
             android:layout_height="44dp"
             android:max="360"
@@ -32,4 +32,19 @@
             app:layout_constraintBottom_toTopOf="@+id/slider" app:layout_constraintTop_toBottomOf="@+id/img_rotate"
             tools:ignore="HardcodedText,MissingConstraints" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="40dp" app:srcCompat="@android:drawable/ic_menu_rotate"
+            android:id="@+id/imageButtonR"
+            tools:ignore="MissingConstraints" app:layout_constraintEnd_toEndOf="@+id/slider"
+            app:layout_constraintStart_toStartOf="@+id/slider" app:layout_constraintHorizontal_bias="0.757"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintBottom_toBottomOf="@+id/slider"/>
+    <ImageButton
+            android:layout_width="44dp"
+            android:layout_height="40dp" app:srcCompat="@android:drawable/ic_menu_rotate"
+            android:id="@+id/imageButtonL"
+            android:scaleX="-1"
+            tools:ignore="MissingConstraints" app:layout_constraintStart_toStartOf="@+id/slider"
+            app:layout_constraintEnd_toEndOf="@+id/slider" app:layout_constraintHorizontal_bias="0.223"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintBottom_toBottomOf="@+id/slider"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
