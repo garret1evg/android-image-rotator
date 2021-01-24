@@ -14,10 +14,12 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
     <SeekBar
-            android:layout_width="320dp"
-            android:layout_height="20dp"
+            android:layout_width="353dp"
+            android:layout_height="44dp"
             android:max="360"
             android:progress="180"
+            android:thumbTint="@color/white"
+            android:progressDrawable="@drawable/slider5"
             android:id="@+id/slider" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" tools:ignore="MissingConstraints"
             app:layout_constraintTop_toBottomOf="@+id/img_rotate" app:layout_constraintBottom_toBottomOf="parent"/>
